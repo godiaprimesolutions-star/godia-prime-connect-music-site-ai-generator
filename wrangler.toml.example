@@ -1,20 +1,17 @@
-# TEMPLATE ONLY — do not deploy until placeholders are replaced with your REAL existing values.
-# Keep the name exactly matching the existing Cloudflare Worker if connecting an existing Worker.
-name = "REPLACE_WITH_EXISTING_WORKER_NAME"
-main = "src/index.js"
-compatibility_date = "2026-10-26"
-
-[vars]
-# Use the real frontend origin when known, e.g. https://your-site.netlify.app
-ALLOWED_ORIGIN = "REPLACE_WITH_REAL_FRONTEND_ORIGIN"
-DARAJA_SHORTCODE = "1692851"
-# Set only after Safaricom confirms the correct product/transaction type for this Till.
-DARAJA_ENVIRONMENT = "sandbox"
-# HF_MODEL must be a supported audio-generation model identifier, verified before use.
-HF_MODEL = "REPLACE_WITH_VERIFIED_AUDIO_MODEL"
-
-[[d1_databases]]
-binding = "GODIA_DB"
-database_name = "REPLACE_WITH_EXISTING_D1_DATABASE_NAME"
-database_id = "REPLACE_WITH_EXISTING_D1_DATABASE_ID"
-migrations_dir = "migrations"
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "godia-prime-connect-music-site-ai-generator",
+  "main": "src/index.js",
+  "compatibility_date": "2026-10-26",
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS"
+  },
+  "d1_databases": [
+    {
+      "binding": "GODIA_DB",
+      "database_name": "godia-prime-connect-db",
+      "database_id": "7bf06a70-56fa-4477-aa12-a52a7c8e0049"
+    }
+  ]
+}
