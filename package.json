@@ -1,0 +1,14 @@
+{
+  "name": "godia-prime-connect-music-site-ai-generator",
+  "private": true,
+  "version": "0.1.0",
+  "description": "GODIA PRIME MUSIC AI integration starter scaffold",
+  "scripts": {
+    "deploy": "wrangler deploy",
+    "dev": "wrangler dev",
+    "d1:migrations:apply": "wrangler d1 migrations apply REPLACE_WITH_EXISTING_D1_DATABASE_NAME --remote"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0"
+  }
+}
