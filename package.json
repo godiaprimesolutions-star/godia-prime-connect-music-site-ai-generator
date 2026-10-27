@@ -1,14 +1,17 @@
 {
+  "$schema": "node_modules/wrangler/config-schema.json",
   "name": "godia-prime-connect-music-site-ai-generator",
-  "private": true,
-  "version": "0.1.0",
-  "description": "GODIA PRIME MUSIC AI integration starter scaffold",
-  "scripts": {
-    "deploy": "wrangler deploy",
-    "dev": "wrangler dev",
-    "d1:migrations:apply": "wrangler d1 migrations apply REPLACE_WITH_EXISTING_D1_DATABASE_NAME --remote"
+  "main": "src/index.js",
+  "compatibility_date": "2026-10-26",
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS"
   },
-  "devDependencies": {
-    "wrangler": "^4.0.0"
-  }
+  "d1_databases": [
+    {
+      "binding": "GODIA_DB",
+      "database_name": "godia-ai-music-db",
+      "database_id": "0770ffda-6f12-42b4-a0e7-bc03ff34738c"
+    }
+  ]
 }
