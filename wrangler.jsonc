@@ -1,0 +1,17 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "godia-prime-connect-music-site-ai-generator",
+  "main": "src/index.js",
+  "compatibility_date": "2026-10-26",
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS"
+  },
+  "d1_databases": [
+    {
+      "binding": "GODIA_DB",
+      "database_name": "godia-ai-music-db",
+      "database_id": "REPLACE_WITH_NEW_MUSIC_DATABASE_ID"
+    }
+  ]
+}
