@@ -1,1 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#08080c">
+<title>GODIA PRIME AI MUSIC</title>
+<style>
+:root{--bg:#08080c;--panel:#111115;--panel2:#1a1a20;--line:#292932;--gold:#f5bd58;--purple:#a66cf2;--pink:#f49aaf;--text:#f7f4fb;--muted:#aaa6b5;--green:#5be0ad}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 50% -10%,#322033 0,transparent 42%),var(--bg);color:var(--text);font:15px/1.45 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+.wrap{width:min(1100px,94%);margin:auto}.top{display:flex;justify-content:space-between;align-items:center;padding:20px 0;border-bottom:1px solid #24232b}.brand{display:flex;align-items:center;gap:11px;font-weight:900;letter-spacing:.08em}.logo{width:43px;height:43px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,var(--gold),var(--pink),var(--purple));color:#17121c;font-size:18px}.brand small{display:block;color:var(--muted);font-size:10px;letter-spacing:.18em}.pill{font-size:11px;color:#d8c3ff;border:1px solid #49305e;border-radius:30px;padding:7px 11px}
+.hero{text-align:center;padding:38px 0 22px}.eyebrow{color:#e8c2ff;text-transform:uppercase;letter-spacing:.18em;font-weight:800;font-size:11px}.hero h1{font-size:clamp(34px,7vw,61px);line-height:1.02;letter-spacing:-.045em;margin:14px 0}.hero h1 span{background:linear-gradient(90deg,#ffcf8d,#c58bff);color:transparent;background-clip:text}.hero p{color:var(--muted);max-width:670px;margin:0 auto}
+.grid{display:grid;grid-template-columns:minmax(0,1fr) 310px;gap:18px;align-items:start;margin:20px auto 45px}.card{background:linear-gradient(150deg,#141418,#0e0e12);border:1px solid var(--line);border-radius:18px;padding:20px;box-shadow:0 15px 50px #0005}.card h2{font-size:18px;margin:0 0 4px}.desc{color:var(--muted);font-size:12px;margin:0 0 18px}
+label{display:block;font-size:12px;font-weight:750;margin:14px 0 7px;color:#e3deeb}input,textarea,select{width:100%;border:1px solid #33323b;border-radius:10px;background:#19191e;color:var(--text);font:inherit;padding:12px;outline:none}input:focus,textarea:focus,select:focus{border-color:#bd8cff}textarea{resize:vertical;min-height:130px}textarea.lyrics{min-height:170px}textarea::placeholder,input::placeholder{color:#777482}.count{display:flex;justify-content:space-between;font-size:11px;color:var(--muted);margin-top:5px}.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}.mode{display:flex;background:#222228;border-radius:30px;padding:4px;margin-bottom:16px}.mode button{width:50%;border:0;background:transparent;color:#aaa5b4;border-radius:24px;padding:9px;font-weight:800}.mode button.active{background:linear-gradient(90deg,#ffc27a,#b47aff);color:#18121f}.btn{border:0;border-radius:11px;padding:13px 15px;font-weight:850;cursor:pointer}.primary{width:100%;margin-top:16px;color:#18111e;background:linear-gradient(95deg,#f7c06d,#c087f7)}.secondary{background:#24232c;color:var(--text);border:1px solid #3c3948}.price{color:var(--gold);font-weight:850}.advanced{margin-top:16px;border:1px solid var(--line);border-radius:13px;overflow:hidden}.advanced summary{cursor:pointer;list-style:none;padding:15px;background:#1b1b20;font-weight:800;display:flex;justify-content:space-between}.advanced summary::-webkit-details-marker{display:none}.advbody{padding:14px}.option{display:flex;align-items:flex-start;gap:10px;background:#19191f;border:1px solid #33323c;border-radius:11px;padding:11px;margin:8px 0}.option input{width:auto;margin-top:4px;accent-color:#bd8cff}.option label{margin:0;flex:1}.option small{display:block;color:var(--muted);font-weight:400;margin-top:3px}.option .cost{white-space:nowrap;color:var(--gold);font-size:12px;font-weight:800}.info{background:#171720;border:1px solid #35313f;border-radius:12px;padding:12px;color:var(--muted);font-size:12px;margin-top:14px}.status{display:none;margin-top:12px;padding:12px;border-radius:10px;font-size:12px;overflow-wrap:anywhere;background:#15352d;color:#c4ffe9}.status.err{background:#3a2028;color:#ffdce1}.result{min-height:180px;border:1px dashed #45404f;border-radius:13px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:16px;gap:9px}.note{color:var(--muted);font-size:12px}.result audio{width:100%;margin-top:8px}.list{margin-top:18px}.row{display:flex;justify-content:space-between;gap:10px;border-bottom:1px solid var(--line);padding:12px 0;font-size:12px}.row span:last-child{text-align:right;color:var(--muted)}footer{text-align:center;color:#817c8c;font-size:11px;padding:0 0 28px}
+@media(max-width:780px){.grid{grid-template-columns:1fr}.hero{padding-top:30px}.card{padding:16px}.two{gap:9px}}@media(max-width:420px){.two{grid-template-columns:1fr}.pill{max-width:115px;text-align:center;font-size:10px}.hero h1{font-size:37px}}
+</style>
+</head>
+<body>
+<header class="wrap top"><div class="brand"><div class="logo">GP</div><div>GODIA PRIME<small>AI MUSIC STUDIO</small></div></div><div class="pill">CREATE · LISTEN · DOWNLOAD</div></header>
+<main class="wrap">
+<section class="hero"><div class="eyebrow">Your idea. Your lyrics. Your sound.</div><h1>Create original songs<br><span>with GODIA PRIME AI</span></h1><p>Shape your music with your own lyrics, a style description, and optional voice and language controls.</p></section>
+<section class="grid">
+<div class="card">
+<div class="mode"><button type="button" class="active" id="expert">Expert</button><button type="button" id="basic">Basic</button></div>
+<h2>Create your song</h2><p class="desc">Write a prompt and add your lyrics. Character limits are shown below.</p>
+<form id="form">
+<label for="title">Song name</label><input id="title" maxlength="80" placeholder="Enter song name"><div class="count"><span>Song title</span><span id="titleCount">0/80</span></div>
+<label for="style">Style</label><textarea id="style" maxlength="1000" style="min-height:90px" placeholder="Describe genre, rhythm, instruments, mood, vocal delivery…"></textarea><div class="count"><span>Musical style</span><span id="styleCount">0/1000</span></div>
+<div class="two"><div><label for="songCount">Number of song versions</label><select id="songCount"><option value="1">1 song version</option><option value="2">2 different song versions</option></select></div><div><label for="secondGenre">Rhythm for second version</label><select id="secondGenre"><option>Reggae</option><option>Afrobeat</option><option>Gospel</option><option>Benga</option><option>Genge</option><option>Hip-hop</option><option>R&B</option><option>Pop</option><option>Traditional Kenyan</option><option>Instrumental</option></select></div></div><p class="desc" id="versionHint">Choose two versions to create the same song idea with different rhythms. Each version is charged separately.</p>
+<div class="two"><div><label for="genre">Genre</label><select id="genre"><option>Afrobeat</option><option>Gospel</option><option>Benga</option><option>Genge</option><option>Hip-hop</option><option>R&B</option><option>Pop</option><option>Reggae</option><option>Traditional Kenyan</option><option>Instrumental</option><option>Other</option></select></div><div><label for="language">Language</label><select id="language"><option value="Kiswahili">Kiswahili (included)</option><option value="English">English</option><option value="Dholuo">Dholuo / Luo</option><option value="Kikuyu">Kikuyu / Gĩkũyũ</option><option value="Kisii">Ekegusii / Kisii</option><option value="Luhya">Luhya languages</option><option value="Kalenjin">Kalenjin</option><option value="Kamba">Kikamba</option><option value="Meru">Kimeru</option><option value="Somali">Somali</option><option value="Maasai">Maa / Maasai</option><option value="Turkana">Turkana</option><option value="Taita">Kitaita</option><option value="Mixed Kenyan languages">Mixed Kenyan languages</option><option value="Other">Other language</option></select></div></div>
+<label for="lyrics">Lyrics</label><textarea id="lyrics" class="lyrics" maxlength="5000" placeholder="Type or paste your lyrics here…"></textarea><div class="count"><span>Lyrics maximum</span><span id="lyricsCount">0/5000</span></div>
+<details class="advanced" id="advanced"><summary><span>⌄ Advanced options</span><span>Optional paid add-ons</span></summary><div class="advbody">
+<p class="desc">Choose only the extras you want. Their prices are added to the KSh 250 full-song price.</p>
+<div class="option"><input type="checkbox" id="normal" data-price="20"><label for="normal">Normal voice<small>Standard vocal style, where supported.</small></label><span class="cost">KSh 20</span></div>
+<div class="option"><input type="checkbox" id="female" data-price="50"><label for="female">Female voice<small>Female vocal style, where supported.</small></label><span class="cost">KSh 50</span></div>
+<div class="option"><input type="checkbox" id="male" data-price="100"><label for="male">Male voice<small>Male vocal style, where supported.</small></label><span class="cost">KSh 100</span></div>
+<div class="option"><input type="checkbox" id="languageExtra" data-price="100"><label for="languageExtra">Other-language option<small>For a language other than Kiswahili. Model language support is not guaranteed.</small></label><span class="cost">KSh 100</span></div>
+<div class="option"><input type="checkbox" id="advancedAccess" data-price="200"><label for="advancedAccess">Advanced controls access<small>Extra controls, if available in the connected AI model.</small></label><span class="cost">KSh 200</span></div>
+<div class="info">Prices shown are the planned pricing display. Payment must be verified by the backend before paid generation or advanced access is unlocked. Your payment is confirmed before a paid service is unlocked.</div>
+</div></details>
+<div class="info"><strong>Current selection:</strong> Full song generation is planned at <span class="price">KSh 250</span>. Selected extras are added to that amount. Listening inside the app is free. Downloading each song costs KSh 50 after payment is confirmed.</div>
+<div class="row"><span>Estimated total</span><span class="price" id="total">KSh 250</span></div>
+<button class="btn primary" id="generate" type="submit">✧ Generate music</button><div class="status" id="status" role="status"></div>
 
+</form></div>
+<aside class="card"><h2>Your song</h2><p class="desc">Listen to each completed version here for free. Downloading a song costs KSh 50 for that song.</p><div class="result" id="result"><div style="font-size:32px">♫</div><strong>Your music result</strong><span class="note">No audio generated yet.</span></div><div class="list"><div class="row"><span>Studio</span><span>GODIA PRIME AI</span></div><div class="row"><span>Lyrics limit</span><span>5,000 characters</span></div><div class="row"><span>Style limit</span><span>1,000 characters</span></div><div class="row"><span>Generation price per song</span><span>KSh 250</span><div class="row"><span>Download per song</span><span>KSh 50</span></div></div><div class="row"><span>Payment</span><span>M-Pesa</span></div></div><div class="info">AI model availability, vocal quality, song length, and language support depend on the chosen provider and its licence.</div></aside>
+</section></main><footer class="wrap">GODIA PRIME AI MUSIC · Use generated audio in line with the provider's terms and model licence.</footer>
+<script>
+const $=id=>document.getElementById(id);
+function count(id,out,max){$(id).addEventListener('input',()=>$(out).textContent=$(id).value.length+'/'+max)}count('title','titleCount',80);count('style','styleCount',1000);count('lyrics','lyricsCount',5000);
+$('basic').onclick=()=>{$('basic').classList.add('active');$('expert').classList.remove('active');$('advanced').open=false};
+$('expert').onclick=()=>{$('expert').classList.add('active');$('basic').classList.remove('active')};
+const extras=['normal','female','male','languageExtra','advancedAccess'];
+function updateTotal(){let perSong=250;extras.forEach(id=>{if($(id).checked)perSong+=Number($(id).dataset.price)});const count=Number($('songCount').value||1);$('total').textContent='KSh '+(perSong*count)+' ('+count+' song'+(count===1?'':'s')+')';$('versionHint').style.display=count===2?'block':'none'}
+$('songCount').addEventListener('change',updateTotal);$('secondGenre').addEventListener('change',()=>{});
+extras.forEach(id=>$(id).addEventListener('change',()=>{if(['normal','female','male'].includes(id)&&$(id).checked){extras.filter(x=>['normal','female','male'].includes(x)&&x!==id).forEach(x=>$(x).checked=false)}if(id==='languageExtra'&&$('language').value==='Kiswahili'){$('languageExtra').checked=false;show('Choose a language other than Kiswahili before selecting the other-language add-on.',true)}updateTotal()}));
+$('language').addEventListener('change',()=>{if($('language').value==='Kiswahili')$('languageExtra').checked=false;updateTotal()});
+function show(msg,err=false){$('status').textContent=msg;$('status').className='status'+(err?' err':'');$('status').style.display='block'}
+$('form').addEventListener('submit',async e=>{e.preventDefault();const payload={title:$('title').value.trim(),style:$('style').value.trim(),lyrics:$('lyrics').value.trim(),genre:$('genre').value,language:$('language').value,extras:extras.filter(id=>$(id).checked),requestedBasePrice:250,songCount:Number($('songCount').value),secondGenre:$('secondGenre').value};if(!payload.lyrics&&!payload.style){show('Please enter lyrics or describe your song style.',true);return}
+$('generate').disabled=true;$('generate').textContent='Connecting to music service…';
+try{const r=await fetch('/api/generate',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});const ct=r.headers.get('content-type')||'';if(!r.ok){let d={};try{d=await r.json()}catch{}throw new Error('Music generation is temporarily unavailable. Please try again later.')}
+if(ct.startsWith('audio/')||ct.includes('octet-stream')){const blob=await r.blob();const url=URL.createObjectURL(blob);$('result').innerHTML='';const h=document.createElement('strong');h.textContent=payload.title||'Generated song';const a=document.createElement('audio');a.controls=true;a.src=url;const link=document.createElement('a');link.href=url;link.download=(payload.title||'godia-prime-song').replace(/[^a-z0-9-_]/gi,'-')+'.audio';link.textContent='Download audio';$('result').append(h,a,link);show('Audio returned. Please listen and download it.')}
+else{const d=await r.json();if(d.audio_url){$('result').innerHTML='';const h=document.createElement('strong');h.textContent=d.title||payload.title||'Generated song';const a=document.createElement('audio');a.controls=true;a.src=d.audio_url;const l=document.createElement('a');l.href=d.audio_url;l.download='godia-prime-song';l.textContent='Download audio';$('result').append(h,a,l)}else throw new Error(d.error||'The provider did not return playable audio.')}
+}catch(err){show(err.message||'Unable to reach the AI provider.',true)}finally{$('generate').disabled=false;$('generate').textContent='✧ Generate music'}
+});updateTotal();
+</script>
+<section class="wrap" style="padding-bottom:36px">
+ <div class="card">
+  <h2>Pay with M-Pesa</h2>
+  <p class="desc">Generation is charged per song version: KSh 250 per song plus selected extras. Listen inside the app for free. Download each song separately for KSh 50.</p>
+  <label for="payerPhone">M-Pesa phone number</label><input id="payerPhone" inputmode="tel" autocomplete="tel" placeholder="0712345678 or 254712345678" maxlength="13">
+  <label for="paymentReference">Song title or payment reference</label><input id="paymentReference" maxlength="80" placeholder="Enter the title of the song you are paying for">
+  <div class="two" style="margin-top:12px">
+   <button class="btn primary" id="payGenerate" type="button">Pay for generation</button>
+   <button class="btn secondary" id="payDownload" type="button">Pay KSh 50 for this download</button>
+  </div>
+  <div class="status" id="payStatus" role="status"></div>
+  <p class="note">Follow the on-screen payment prompt to complete your transaction.</p>
+ </div>
+</section>
+<script>
+(function(){
+ const status=document.getElementById('payStatus');
+ function msg(t,err){status.textContent=t;status.className='status'+(err?' err':'');status.style.display='block'}
+ async function pay(product,button){
+  const phone=document.getElementById('payerPhone').value.trim();
+  const reference=document.getElementById('paymentReference').value.trim()||document.getElementById('title')?.value.trim()||'GODIA-PRIME-MUSIC';
+  let amount=product==='download'?50:250;
+  const songCount=product==='generate'?Number(document.getElementById('songCount')?.value||1):1;
+  const extras=['normal','female','male','languageExtra','advancedAccess'].filter(id=>document.getElementById(id)?.checked);
+  if(product==='generate') { extras.forEach(id=>amount+=Number(document.getElementById(id).dataset.price||0)); amount*=songCount; }
+  if(!/^((\+?254)|0)?[71]\d{8}$/.test(phone.replace(/\s+/g,''))){msg('Enter a valid Kenyan mobile number, for example 0712345678.',true);return}
+  button.disabled=true;const old=button.textContent;button.textContent='Requesting M-Pesa…';
+  try{
+   const r=await fetch('/api/payments/mpesa/stk',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({phone,amount,reference,product,songCount,extras:product==='generate'?extras:[]})});
+   const d=await r.json();if(!r.ok)throw new Error(d.error||'Could not start M-Pesa payment.');
+   msg((d.message||'M-Pesa prompt requested.')+' Amount: KSh '+amount+'. Payment reference: '+d.reference);
+  }catch(e){msg(e.message||'M-Pesa payment is temporarily unavailable. Please try again later.',true)}finally{button.disabled=false;button.textContent=old}
+ }
+ document.getElementById('payGenerate')?.addEventListener('click',e=>pay('generate',e.currentTarget));
+ document.getElementById('payDownload')?.addEventListener('click',e=>pay('download',e.currentTarget));
+})();
+</script>
+
+</body></html>
